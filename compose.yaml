@@ -1,0 +1,19 @@
+version: '3'
+services:
+  # FastAPI Application
+  routeapp:
+    build: .
+    ports:
+      - "80:80"  # Map container port 80 to host port 80
+    depends_on:
+      - postgres  # Depend on the PostgreSQL service
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:13  # Use a PostgreSQL Docker image
+    environment:
+      POSTGRES_DB: routes_db  # Replace with your database name
+      POSTGRES_USER: postgres  # Replace with your database user
+      POSTGRES_PASSWORD: postgres  # Replace with your database password
+    ports:
+      - "5432:5432"  # Map container port 5432 to host port 5432
