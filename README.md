@@ -1,41 +1,48 @@
-# FastAPI приложение для расчёта оптимального маршрута
+# FastAPI application for an optimal route calculation
 
-Это приложение создано для расчета оптимального маршрута на основе переданных точек маршрута. Приложение предоставляет REST API для расчёта маршрута по точкам из предоставленного .csv файла, а также для получения информации о ранее созданном маршруте по его идентификатору.
+This application is created to calculate an optimal route based on the passed route points. The application provides a REST API to calculate a route based on points from a .csv file, and to retrieve information about a previously created route by its ID.
+During the development I practiced using:
+- Python
+- FastAPI
+- Postgres
+- Pydantic
+- SQL Alchemy
+- Networkxx and working with graphs
 
-## Установка и запуск
+## Installation and startup
 
-1. Установите Docker и Docker Compose, если они еще не установлены.
-2. Клонируйте этот репозиторий:
+1. Install Docker.
+2. Clone this repository:
 
    ```bash
-   git clone <URL репозитория>
+   git clone https://github.com/kitaef/RouteTestTask.git
    ```
 
-3. Перейдите в директорию с проектом:
+3. Navigate to the project directory:
 
    ```bash
-   cd <название директории>
+   cd <directory name>
    ```
 
-4. Запустите Docker Compose:
+4. Run Docker Compose:
 
-   ```bash
+   ````bash
    docker-compose up --build
    ```
 
-5. После успешного запуска вы сможете получить доступ к API по адресу [http://localhost:80](http://localhost:80).
+5. After a successful launch, you will be able to access the API at [http://localhost:80](http://localhost:80).
 
-## Endpoint-ы
+## Endpoints
 
-- **POST /api/routes** - создание маршрута. В теле запроса отправляется CSV файл с точками маршрута (координаты точек должны быть в колонках lat и lng.
-- **GET /api/routes/{id}** - получение маршрута по его идентификатору.
+- **POST /api/routes** - route creation. In the request body put a CSV file with the route points (the coordinates of the points should be in 'lat' and 'lng' columns.
+- **GET /api/routes/{id}** - get route by its identifier.
 
-## Тестирование
+## Testing
 
-В репозитории предусмотрен простой юнит-тест для проверки работы функции вычисления оптимального маршрута.
+The repository provides a simple unit test to check the optimal route calculation function.
 
-## Отсутствующие endpoint-ы и методы
+## Possiblle improvements
 
-- На текущий момент API не предоставляет возможность обновления или удаления маршрутов. Добавление таких функций может быть полезным для управления маршрутами в системе.
-- Нет endpoint-а для получения списка всех маршрутов. Добавление этой функциональности может быть полезным для просмотра доступных маршрутов.
-- Дополнительные методы HTTP (например, PUT и DELETE) могут быть добавлены для обеспечения полной функциональности CRUD операций (Create, Read, Update, Delete).
+- Currently, the API does not provide the ability to update or delete routes. Adding such features could be useful for managing routes in the system.
+- There is no endpoint to retrieve a list of all routes. Adding this functionality could be useful to view available routes.
+- Additional HTTP methods (e.g., PUT and DELETE) can be added to provide full functionality for CRUD operations (Create, Read, Update, Delete).
