@@ -15,7 +15,7 @@ During the development I practiced using:
 2. Clone this repository:
 
    ```bash
-   git clone https://github.com/kitaef/RouteTestTask.git
+   git clone https://github.com/kitaef/RouteCalcultor.git
    ```
 
 3. Navigate to the project directory:
