@@ -26,7 +26,7 @@ During the development I practiced using:
 
 4. Run Docker Compose:
 
-   ````bash
+   ```bash
    docker-compose up --build
    ```
 
