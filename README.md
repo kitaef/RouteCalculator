@@ -8,6 +8,7 @@ During the development I practiced using:
 - Pydantic
 - SQL Alchemy
 - Networkxx and working with graphs
+- Docker and docker-compose
 
 ## Installation and startup
 
